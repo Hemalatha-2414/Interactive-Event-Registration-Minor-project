@@ -1,21 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-  <title>Event Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventPass - IGNITE'26</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>EventPass</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About Event</a>
-      <a href="#">Schedule</a>
-      <a href="#">Contact</a>
-      <a href="#">My Passes</a>
+    <header class="navbar">
+
+        <div class="logo">
+            🎟️ <span>EventPass</span>
+        </div>
+
+        <nav>
+            <a >Home</a>
+            <a >About Event</a>
+            <a >Schedule</a>
+            <a >Gallery</a>
+            <a >Contact</a>
+            
+        </nav>
+
+        <button class="mypass">
+            🎫 My Passes
+        </button>
+
+    </header>
+    <hr>
+
+    <section class="hero">
+
+        <div class="event-title">
+            <h1>IGNITE'26</h1>
+            <p>Let the Passion Spark!</p>
+        </div>
+
+        <div class="event-info">
+            <div>
+                📅
+                <strong>20 - 22 March 2026</strong>
+                <small>Event Date</small>
+            </div>
+
+            <div>
+                📍
+                <strong>VSB College Campus</strong>
+                <small>Coimbatore</small>
+            </div>
+
+            <div>
+                👥
+                <strong>500+</strong>
+                <small>Expected Participants</small>
+            </div>
+        </div>
+
+    </section>
+    <main class="main-container">
+        <section class="registration">
+            <div class="section-heading">
+                <div class="icon">👤</div>
+                <div>
+                    <h2>Event Registration</h2>
+                    <p>Fill in your details to register for the event.</p>
+                </div>
+            </div>
+
+
+            <form id="registrationForm">
+
+                <label for="name">Full Name</label>
+
+                <input  type="text" id="name" placeholder="Enter your full name" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email"  required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                <label for="category">Ticket Category</label>
+
+                <select id="category" required>
+
+                    <option value="">Select Category</option>
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Guest">Guest</option>
+
+                </select>
+                
+                <label for="photo">Profile Photo</label>
+<input type="file" id="photo" accept="image/*">
+                <button  type="submit" class="register-btn"> ✈ Register Now</button>
+                <p class="file-info">Allowed: JPG, PNG (Max size 2MB)</p>
+
+            </form>
+
+        </section>
+
+
+        <!-- DIGITAL PASS -->
+        <section class="pass-section">
+          <div class="section-heading success">
+            <div class="icon">  ✓ </div>
+            <div>
+              <h2>Your Digital Event Pass</h2>
+              <p>Your registration will appear here.</p>
+            </div>
+            </div>
+
+            
+
+
+            <!-- PASS -->
+            <div class="digital-pass">
+              <h1>IGNITE'26</h1>
+              <p class="tagline">Let the Passion Spark!</p>
+              <div class="profile">
+                
+                <div class="profile-circle">
+
+            <img id="passPhoto" src="" alt="Profile Photo">
+        </div>
+
+                 
+                 <div class="participant">
+                  <h2 id="passName">Your Name  </h2>
+                  <span id="passCategory">Student</span>
+                  <div class="details">
+                    <div>
+                      <small>REGISTRATION ID</small>
+                      <strong id="passId"> EVT-2026-XXXXX</strong>
+                     </div>
+                     <div>
+                      <small>DATE</small>
+                      <strong>20 - 22 March 2026</strong>
+                    </div>
+                    <div>
+                      <small>VENUE</small>
+                      <strong>📍 VSB College Campus</strong>
+                    </div>
+                    <div>
+                      <small>TICKET TYPE</small>
+                      <strong id="passTicket"> Student Pass </strong>
+                     </div>
+
+                        </div>
+
+                    </div>
       
-    </nav>
-  </header>
-  
+
+
+                    <!-- QR CODE PLACEHOLDER -->
+                    <div class="qr-section">
+                      <!-- <div class="qr-placeholder"></div> -->
+                      <div id="qrcode"></div>
+                      <p>Scan at the entry gate</p>
+                    <!-- </div> -->
+                  </div>
+                </div>
+
+
+            <!-- BUTTONS -->
+            <div class="pass-buttons">
+              <button id="downloadPass"><strong>⬇ Download Pass</strong></button>
+              <button id="Gallery"><strong>🖼 Save to Gallery</strong></button>
+            </div>
+          </section>
+        </main>
+
+
+    <!-- EVENT INFORMATION -->
+    <section class="event-details">
+      <div>
+        <h2>About The Event</h2>
+        <p>
+          IGNITE'26 is our annual techno-cultural fest.
+          Join us for three days of learning, fun,
+          innovation and excitement!
+          </p>
+        </div>
+        <div>
+          <h2>Event Highlights</h2>
+          <p>🎤 Inspiring Speakers</p>
+          <p>🏆 Competitions</p>
+          <p>🛠 Workshops</p>
+          <p>🎁 Exciting Prizes</p>
+        </div>
+        <div>
+          <h2>Contact Us</h2>
+          <p>📞 +91 98765 43210</p>
+          <p>✉ ignite26@example.com</p>
+          <p>🌐 www.ignite26.com</p>
+        </div>
+      </section>
+
+
+    <!-- FOOTER -->
+    <footer> © 2026 EventPass. All rights reserved. ❤️</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <section>
+    <table border="1">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" placeholder="Enter your email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="tel" placeholder="Enter your mobile number"></td>
+            </tr>
+            <tr>
+                <td>Ticket Category</td>
+                <td><input type="text" >
+                <select>
+                    <option>Student</option>
+                    <option>Faculty</option>
+                    <option>Guest</option>
+                    
+                </select></td>
+                <tr>
+                  <td><input type="file"></td>
+                  <td>Profile</td>
+                </tr>
+                <tr>
+                  <nav>
+                  <td><button type="submit">Register Now</button></td>
+                  </nav>
+                </tr>
+              </table>
+
+    
+      
+      
+    
+      
+    </form>
+  </section>
+
+   -->
