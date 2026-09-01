@@ -17,22 +17,22 @@
         </div>
 
         <nav>
-            <a >Home</a>
-            <a >About Event</a>
-            <a >Schedule</a>
-            <a >Gallery</a>
-            <a >Contact</a>
+            <a href="#home">Home</a>
+            <a href="#register">Register</a>
+            <a href="#about">About Event</a>
+            <a href="#contact">Contact</a>
+            
             
         </nav>
 
-        <button class="mypass">
-            🎫 My Passes
+        <button class="mypass" id="myPassBtn" onclick="document.getElementById('pass').scrollIntoView({behavior:'smooth'})">
+          🎫 My Passes  
         </button>
 
     </header>
     <hr>
 
-    <section class="hero">
+    <section class="hero" id="home">
 
         <div class="event-title">
             <h1>IGNITE'26</h1>
@@ -61,7 +61,7 @@
 
     </section>
     <main class="main-container">
-        <section class="registration">
+        <section class="registration" id="register">
             <div class="section-heading">
                 <div class="icon">👤</div>
                 <div>
@@ -102,7 +102,7 @@
 
 
         <!-- DIGITAL PASS -->
-        <section class="pass-section">
+        <section class="pass-section" id="pass">
           <div class="section-heading success">
             <div class="icon">  ✓ </div>
             <div>
@@ -115,7 +115,7 @@
 
 
             <!-- PASS -->
-            <div class="digital-pass">
+            <div class="digital-pass" id="digitalPass">
               <h1>IGNITE'26</h1>
               <p class="tagline">Let the Passion Spark!</p>
               <div class="profile">
@@ -143,8 +143,8 @@
                       <strong>📍 VSB College Campus</strong>
                     </div>
                     <div>
-                      <small>TICKET TYPE</small>
-                      <strong id="passTicket"> Student Pass </strong>
+                      <small style="align-self: center;">TICKET TYPE</small>
+                      <strong id="passTicket" style="align-self: center;"> Student Pass </strong>
                      </div>
 
                         </div>
@@ -166,14 +166,14 @@
             <!-- BUTTONS -->
             <div class="pass-buttons">
               <button id="downloadPass"><strong>⬇ Download Pass</strong></button>
-              <button id="Gallery"><strong>🖼 Save to Gallery</strong></button>
+              <!-- <button id="Gallery"><strong>🖼 Save to Gallery</strong></button> -->
             </div>
           </section>
         </main>
 
 
     <!-- EVENT INFORMATION -->
-    <section class="event-details">
+    <section class="event-details" id="about">
       <div>
         <h2>About The Event</h2>
         <p>
@@ -189,12 +189,14 @@
           <p>🛠 Workshops</p>
           <p>🎁 Exciting Prizes</p>
         </div>
+        <section id="contact">
         <div>
           <h2>Contact Us</h2>
           <p>📞 +91 98765 43210</p>
           <p>✉ ignite26@example.com</p>
           <p>🌐 www.ignite26.com</p>
         </div>
+        </section>
       </section>
 
 
